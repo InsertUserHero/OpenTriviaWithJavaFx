@@ -4,6 +4,9 @@ import javafx.scene.control.Label;
 
 import java.io.IOException;
 
+/**
+ * This is the controller for the final scene
+ */
 public class FinalSceneController {
     @FXML
     Label highScore;
@@ -12,11 +15,19 @@ public class FinalSceneController {
     @FXML
     Button playAgainButton;
 
+    /**
+     * Sets up the information for this scene
+     */
     @FXML
     public void initialize(){
         highScore.setText("High Score: " + TitleController.highScore);
         currentScore.setText("Current Score: " + QuestionController.score);
     }
+
+    /**
+     * This will reset some data and switch the scene to the title page
+     * @throws IOException
+     */
     @FXML
     public void playAgainClicked() throws IOException {
         StageManager sm = new StageManager();

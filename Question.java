@@ -1,5 +1,9 @@
 import java.util.List;
 
+/**
+ * This class holds all the information from a question.
+ * This is used in Trivia Questions as a list
+ */
 public class Question {
     private String type;
     private String difficulty;

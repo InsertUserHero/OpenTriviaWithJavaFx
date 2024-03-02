@@ -1,5 +1,8 @@
 import java.util.List;
 
+/**
+ * This class holds the list of questions
+ */
 public class TriviaQuestions {
     private int response_code;
     private List<Question> results;

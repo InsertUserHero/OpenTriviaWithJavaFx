@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * This class is the controller for the QuestionScene page.
+ */
 public class QuestionController {
 
     @FXML
@@ -25,6 +28,11 @@ public class QuestionController {
     private static String lastResponse = "";
     static boolean moreQuestions = true;
 
+    /**
+     * This will switch the scene and update some data
+     * @param event click
+     * @throws IOException
+     */
     @FXML
     public void answerClicked(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource();
@@ -41,6 +49,12 @@ public class QuestionController {
         sm.switchScene("AnswerPage.fxml");
 
     }
+
+    /**
+     * This initializes the scene by getting information from the triviaQuestions
+     * (TriviaQuestions object) from TitleController.
+     * @throws IOException
+     */
     @FXML
     public void initialize() throws IOException {
 
@@ -67,10 +81,18 @@ public class QuestionController {
             moreQuestions = false;
         }
     }
+
+    /**
+     * gets last response information
+     * @return lastResponse
+     */
     public String getLastResponse() {
         return lastResponse;
     }
 
+    /**
+     * resets the score
+     */
     public void resetScore(){
         score = 0;
     }

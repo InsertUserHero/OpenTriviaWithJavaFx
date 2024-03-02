@@ -9,8 +9,16 @@ import java.net.URL;
 
 import java.util.Scanner;
 
+/**
+ * This class is responsible for the API get calls to the open
+ * trivia database.
+ */
 public class APIHandler {
 
+    /**
+     * This gets the categories for the trivia game
+     * @return Trivia object
+     */
     public Trivia getCategories(){
         try {
             URL url = new URL("https://opentdb.com/api_category.php");
@@ -50,6 +58,14 @@ public class APIHandler {
         return null;
     }
 
+    /**
+     * This will get all the questions that the user wants
+     * @param category category
+     * @param numberOfQuestions numberOfQuestions
+     * @param difficulty difficulty
+     * @return TriviaQuestions object
+     * @throws RuntimeException
+     */
     public TriviaQuestions getQuestions(String category, String numberOfQuestions, String difficulty) throws RuntimeException{
         try {
             URL url = new URL("https://opentdb.com/api.php?amount=" + numberOfQuestions +"&category="+category+"&difficulty="+difficulty+"&type=multiple");

@@ -11,6 +11,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * This is the controller class of the title scene page.
+ */
 public class TitleController implements Initializable {
     private StageManager sm = new StageManager();
     static TriviaQuestions triviaQuestions = new TriviaQuestions();
@@ -37,6 +40,12 @@ public class TitleController implements Initializable {
 
     @FXML
     Button startButton;
+
+    /**
+     * This calls the API handler to get information from the database
+     * and also will switch the scene
+     * @throws IOException
+     */
     @FXML
     public void startClicked() throws IOException {
         APIHandler temp = new APIHandler();
@@ -52,6 +61,12 @@ public class TitleController implements Initializable {
         }
     }
 
+    /**
+     * This initializes the title scene by getting the category info
+     * from the API
+     * @param url url
+     * @param resourceBundle resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         highScoreDisplay.setText("High Score: " + highScore);

@@ -5,6 +5,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * This class handles the switching of scenes and
+ * setting up the initial scene.
+ */
 public class StageManager {
     private static final APIHandler apiHandler = new APIHandler();
     private static final Stage stage = new Stage();

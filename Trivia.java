@@ -1,5 +1,8 @@
 import java.util.List;
 
+/**
+ * This class holds a list of trivia categories.
+ */
 public class Trivia {
     List<Category> trivia_categories;
 
