@@ -9,6 +9,6 @@
    <children>
       <Label fx:id="highScore" prefHeight="42.0" prefWidth="138.0" text="High Score: " />
       <Label fx:id="currentScore" prefHeight="46.0" prefWidth="141.0" text="Score:" />
-      <Button fx:id="playAgainButton" mnemonicParsing="false" onAction="#playAgainClicked" prefHeight="75.0" prefWidth="112.0" text="Play agian?" />
+      <Button fx:id="playAgainButton" mnemonicParsing="false" onAction="#playAgainClicked" prefHeight="75.0" prefWidth="112.0" text="Play again?" />
    </children>
 </VBox>

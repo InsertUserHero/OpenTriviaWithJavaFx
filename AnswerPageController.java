@@ -34,7 +34,7 @@ public class AnswerPageController {
     @FXML
     public void initialize(){
         QuestionController temp = new QuestionController();
-        rightOrWrong.setText(temp.getLastResponse());
+        rightOrWrong.setText(temp.getLastResponse().replaceAll("&#039;","'").replaceAll("&quot","\""));
     }
 
 }
